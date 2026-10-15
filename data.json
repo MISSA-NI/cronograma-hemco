@@ -1,16 +1,25 @@
 [
   {
     "id": "1",
-    "name": "Proyecto SCADA HEMCO",
-    "duration": "70 days",
+    "name": "SCADA PLANTEL HEMCO",
+    "duration": "136 days",
     "start": "2026-09-28",
-    "finish": "2026-12-18",
+    "finish": "2027-04-05",
     "type": "resumen",
-    "progress": 10
+    "progress": 13
   },
   {
     "id": "2",
-    "name": "Inicio del proyecto",
+    "name": "Próximos pasos inmediatos — presentación y consultas bloqueantes",
+    "duration": "5 days",
+    "start": "2026-09-28",
+    "finish": "2026-10-02",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "3",
+    "name": "Sesión de presentación y debate de la propuesta (MISSA + jefatura de planta + instrumentación + TI)",
     "duration": "0 days",
     "start": "2026-09-28",
     "finish": "2026-09-28",
@@ -18,62 +27,440 @@
     "progress": 100
   },
   {
-    "id": "3",
-    "name": "Ingeniería",
-    "duration": "15 days",
-    "start": "2026-09-28",
-    "finish": "2026-10-16",
-    "type": "resumen",
-    "progress": 40
-  },
-  {
     "id": "4",
-    "name": "Levantamiento en planta",
-    "duration": "5 days",
+    "name": "Resolución de las 13 consultas bloqueantes del capítulo 18 (con acta firmada)",
+    "duration": "0 days",
     "start": "2026-09-28",
-    "finish": "2026-10-02",
-    "type": "tarea",
-    "progress": 80
+    "finish": "2026-09-28",
+    "type": "hito",
+    "progress": 0
   },
   {
     "id": "5",
-    "name": "Listado de señales y tags",
-    "duration": "5 days",
-    "start": "2026-10-05",
-    "finish": "2026-10-09",
-    "type": "tarea",
-    "progress": 30
+    "name": "Hito: consultas bloqueantes resueltas (acta firmada)",
+    "duration": "0 days",
+    "start": "2026-10-02",
+    "finish": "2026-10-02",
+    "type": "hito",
+    "progress": 0
   },
   {
     "id": "6",
-    "name": "Arquitectura de red y servidores",
-    "duration": "5 days",
-    "start": "2026-10-12",
-    "finish": "2026-10-16",
-    "type": "tarea",
+    "name": "Etapa 1 — Levantamiento y diagnóstico (cierre)",
+    "duration": "10 days",
+    "start": "2026-09-28",
+    "finish": "2026-10-09",
+    "type": "resumen",
     "progress": 0
   },
   {
     "id": "7",
-    "name": "Aprobación de ingeniería básica",
+    "name": "Cierre de conteo de tags y validación de P&ID vigentes",
     "duration": "0 days",
-    "start": "2026-10-16",
-    "finish": "2026-10-16",
+    "start": "2026-09-28",
+    "finish": "2026-09-28",
     "type": "hito",
     "progress": 0
   },
   {
     "id": "8",
-    "name": "Desarrollo HMI en Ignition",
-    "duration": "25 days",
-    "start": "2026-10-19",
-    "finish": "2026-11-20",
-    "type": "resumen",
+    "name": "Hito: levantamiento cerrado (conteo de tags y P&ID validados por HEMCO)",
+    "duration": "0 days",
+    "start": "2026-10-09",
+    "finish": "2026-10-09",
+    "type": "hito",
     "progress": 0
   },
   {
     "id": "9",
-    "name": "Plantillas y estándar gráfico",
+    "name": "Preparación de PLC previa a ventanas de paro (revisión de estándar y lógica de convivencia)",
+    "duration": "5 days",
+    "start": "2026-09-28",
+    "finish": "2026-10-02",
+    "type": "resumen",
+    "progress": 100
+  },
+  {
+    "id": "10",
+    "name": "Trituración — PLC principal de Trituración: Revisión y verificación de estándar de PLC",
+    "duration": "0 days",
+    "start": "2026-09-28",
+    "finish": "2026-09-28",
+    "type": "hito",
+    "progress": 100
+  },
+  {
+    "id": "11",
+    "name": "Molienda — Dominion 1: Revisión y verificación de estándar de PLC",
+    "duration": "0 days",
+    "start": "2026-09-28",
+    "finish": "2026-09-28",
+    "type": "hito",
+    "progress": 100
+  },
+  {
+    "id": "12",
+    "name": "Molienda — Dominion 2: Revisión y verificación de estándar de PLC",
+    "duration": "0 days",
+    "start": "2026-09-28",
+    "finish": "2026-09-28",
+    "type": "hito",
+    "progress": 100
+  },
+  {
+    "id": "13",
+    "name": "Molienda — Molino Sepro: Revisión y verificación de estándar de PLC",
+    "duration": "0 days",
+    "start": "2026-09-28",
+    "finish": "2026-09-28",
+    "type": "hito",
+    "progress": 100
+  },
+  {
+    "id": "14",
+    "name": "Precipitación — PLC de Precipitación: Revisión y verificación de estándar de PLC",
+    "duration": "0 days",
+    "start": "2026-09-28",
+    "finish": "2026-09-28",
+    "type": "hito",
+    "progress": 100
+  },
+  {
+    "id": "15",
+    "name": "Bombas Abel — Bomba 3 (Siemens): Revisión y verificación de estándar de PLC",
+    "duration": "0 days",
+    "start": "2026-09-28",
+    "finish": "2026-09-28",
+    "type": "hito",
+    "progress": 100
+  },
+  {
+    "id": "16",
+    "name": "Molienda — Molienda secundaria (bombas de agua): Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "17",
+    "name": "Molienda — Dominion 1: Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "18",
+    "name": "Molienda — Dominion 2: Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "19",
+    "name": "Molienda — Molino Sepro: Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "20",
+    "name": "Precipitación — PLC de Precipitación: Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "21",
+    "name": "Precipitación — PLC principal de Trituración: Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "22",
+    "name": "Precipitación — Agitador 0: Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "23",
+    "name": "Precipitación — Agitador 1: Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "24",
+    "name": "Precipitación — Bombas bermas Abel: Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "25",
+    "name": "Precipitación — Espesadores: Integración de estándar de PLC",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "26",
+    "name": "Precipitación — Espesadores: Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "3 days",
+    "start": "2026-09-30",
+    "finish": "2026-10-02",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "27",
+    "name": "Bombas Abel — Bomba 3 (Siemens): Definición de lógica de control de convivencia SCADA / control local",
+    "duration": "0.07 days",
+    "start": "2026-09-30",
+    "finish": "2026-09-30",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "28",
+    "name": "Ventana de paro 1 — Trituración y Molienda (única ventana de Molienda)",
+    "duration": "0 days",
+    "start": "2026-10-10",
+    "finish": "2026-10-12",
+    "type": "resumen",
+    "progress": 100
+  },
+  {
+    "id": "29",
+    "name": "Dominion N°1 - Verificación de correcta integración de estándar - En sitio",
+    "duration": "0.07 days",
+    "start": "2026-10-10",
+    "finish": "2026-10-10",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "30",
+    "name": "Dominion N°1 - Intervención en sitio / Integración de estándares para el SCADA",
+    "duration": "0.07 days",
+    "start": "2026-10-10",
+    "finish": "2026-10-10",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "31",
+    "name": "Dominion N°1 - Verificación de creación de DB y UDT del equipo (300-ML-002)",
+    "duration": "0.07 days",
+    "start": "2026-10-10",
+    "finish": "2026-10-10",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "32",
+    "name": "Dominion N°1 - Verificación de enlace de variables vía SyncVar",
+    "duration": "0.07 days",
+    "start": "2026-10-10",
+    "finish": "2026-10-10",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "33",
+    "name": "Trituración - Verificación de correcta integración de estándar - En sitio",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "34",
+    "name": "Trituración - Intervención en sitio / Integración de estándares para el SCADA",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "35",
+    "name": "Trituración - Verificación de creación de DB y UDT del equipo (300-ML-002)",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "36",
+    "name": "Trituración - Verificación de enlace de variables vía SyncVar",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "37",
+    "name": "Molienda secundaria - Verificación de correcta integración de estándar - En sitio",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "38",
+    "name": "Molienda secundaria - Verificación de correcta integración de estándar - En sitio",
+    "duration": "0.19 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "39",
+    "name": "Verificación de creación de DB (01_Status, 02_CMD, 03_Sets, 04_Aux) y UDT del equipo (300-ML-001)",
+    "duration": "0.19 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "40",
+    "name": "Verificación de enlace de variables vía SyncVar hacia el SCADA",
+    "duration": "0.12 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "41",
+    "name": "Molienda secundaria - Verificación de correcta integración de estándar - En sitio",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "42",
+    "name": "Molienda secundaria - Integración de estándar de PLC",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "43",
+    "name": "Molienda secundaria - Intervención en sitio / Integración de estándares para el SCADA",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "44",
+    "name": "Molienda secundaria - Verificación de creación de DB y UDT por bomba",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "45",
+    "name": "Molienda secundaria - Verificación de enlace de variables vía SyncVar",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "46",
+    "name": "Dominion N°2 - Verificación de correcta integración de estándar - En sitio",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "47",
+    "name": "Dominion N°2 - Intervención en sitio / Integración de estándares para el SCADA",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "48",
+    "name": "Dominion N°2 - Verificación de creación de DB y UDT del equipo (300-ML-002)",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "49",
+    "name": "Dominion N°2 - Verificación de enlace de variables vía SyncVar",
+    "duration": "0.07 days",
+    "start": "2026-10-11",
+    "finish": "2026-10-11",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "50",
+    "name": "Etapa 2 — Filosofía de operación",
+    "duration": "15 days",
+    "start": "2026-10-05",
+    "finish": "2026-10-23",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "51",
+    "name": "Taller de filosofía de operación (operadores y supervisión)",
+    "duration": "10 days",
+    "start": "2026-10-05",
+    "finish": "2026-10-16",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "52",
+    "name": "Redacción y aprobación del documento de filosofía de operación",
     "duration": "5 days",
     "start": "2026-10-19",
     "finish": "2026-10-23",
@@ -81,17 +468,251 @@
     "progress": 0
   },
   {
-    "id": "10",
-    "name": "Pantallas de proceso",
+    "id": "53",
+    "name": "Hito: filosofía de operación aprobada",
+    "duration": "0 days",
+    "start": "2026-10-23",
+    "finish": "2026-10-23",
+    "type": "hito",
+    "progress": 0
+  },
+  {
+    "id": "54",
+    "name": "Etapas 3 y 4 — Arquitectura de sistema, entrega de P&ID/I-O y modelo de datos",
+    "duration": "25 days",
+    "start": "2026-10-05",
+    "finish": "2026-11-06",
+    "type": "resumen",
+    "progress": 23
+  },
+  {
+    "id": "55",
+    "name": "Entrega de P&ID vigentes, listado de I/O y documentación de PLC (HEMCO → MISSA)",
+    "duration": "15 days",
+    "start": "2026-10-05",
+    "finish": "2026-10-23",
+    "type": "tarea",
+    "progress": 10
+  },
+  {
+    "id": "56",
+    "name": "Validación de arquitectura de sistema y red con TI de HEMCO (topología, segmentación, servidor/historian)",
+    "duration": "10 days",
+    "start": "2026-10-12",
+    "finish": "2026-10-23",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "57",
+    "name": "Definición de nomenclatura de tags y catálogo de UDT (modelo de datos)",
     "duration": "10 days",
     "start": "2026-10-26",
+    "finish": "2026-11-06",
+    "type": "tarea",
+    "progress": 65
+  },
+  {
+    "id": "58",
+    "name": "Hito: modelo de datos congelado",
+    "duration": "0 days",
+    "start": "2026-11-06",
+    "finish": "2026-11-06",
+    "type": "hito",
+    "progress": 0
+  },
+  {
+    "id": "59",
+    "name": "Etapa 5.1 — Ajustes al estándar gráfico",
+    "duration": "2 days",
+    "start": "2026-10-26",
+    "finish": "2026-10-27",
+    "type": "resumen",
+    "progress": 100
+  },
+  {
+    "id": "60",
+    "name": "Ajuste de criterios visuales: paleta de colores, tipografías, tamaños, jerarquía y retícula (ítems 1-3)",
+    "duration": "1 days",
+    "start": "2026-10-26",
+    "finish": "2026-10-26",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "61",
+    "name": "Ajuste de botones/controles, navegación, comportamiento visual de equipos, template maestro y consistencia de componentes (ítems 4-8)",
+    "duration": "1 days",
+    "start": "2026-10-27",
+    "finish": "2026-10-27",
+    "type": "tarea",
+    "progress": 100
+  },
+  {
+    "id": "62",
+    "name": "Etapa 5.2 — Diseño de pantallas de consola en Ignition",
+    "duration": "6 days",
+    "start": "2026-10-28",
+    "finish": "2026-11-04",
+    "type": "resumen",
+    "progress": 12
+  },
+  {
+    "id": "63",
+    "name": "Lote 1/3 — P-100 Vista general de planta, P-200 Chancado, P-210 Molienda, P-220 Lixiviación/CIL (ítems 9-12)",
+    "duration": "2 days",
+    "start": "2026-10-28",
+    "finish": "2026-10-29",
+    "type": "tarea",
+    "progress": 35
+  },
+  {
+    "id": "64",
+    "name": "Lote 2/3 — P-230 Merrill-Crowe y Refinería, P-240 Relaves y Detoxificación, P-250 Agua y Bombeo (ítems 13-15)",
+    "duration": "2 days",
+    "start": "2026-10-30",
+    "finish": "2026-11-02",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "65",
+    "name": "Lote 3/3 — P-260 Energía, P-270 Salud de Red TO, P-3xx Detalle de unidad/equipo (ítems 16-18)",
+    "duration": "2 days",
+    "start": "2026-11-03",
+    "finish": "2026-11-04",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "66",
+    "name": "Etapa 5.3 — Diseño de pantallas de soporte en Ignition",
+    "duration": "6 days",
+    "start": "2026-10-28",
+    "finish": "2026-11-04",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "67",
+    "name": "Lote 1/2 — P-400 Alarmas activas, P-410 Histórico de alarmas, P-420 Tendencias, P-430 Reportes (ítems 19-22)",
+    "duration": "3 days",
+    "start": "2026-10-28",
+    "finish": "2026-10-30",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "68",
+    "name": "Lote 2/2 — P-440 Registro de eventos y auditoría, P-450 Desempeño de alarmas, P-900 Administración (ítems 23-25)",
+    "duration": "3 days",
+    "start": "2026-11-02",
+    "finish": "2026-11-04",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "69",
+    "name": "Etapa 5.4 — Diseño de pantallas para Videowall en Ignition",
+    "duration": "6 days",
+    "start": "2026-10-28",
+    "finish": "2026-11-04",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "70",
+    "name": "Lote 1/2 — VW-01 Chancado y Molienda, VW-02 Vista general de planta, VW-03 Lixiviación/CIL/Merrill-Crowe (ítems 26-28)",
+    "duration": "3 days",
+    "start": "2026-10-28",
+    "finish": "2026-10-30",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "71",
+    "name": "Lote 2/2 — VW-04 Servicios, VW-05 Alarmas activas, VW-06 Tendencias generales (ítems 29-31)",
+    "duration": "3 days",
+    "start": "2026-11-02",
+    "finish": "2026-11-04",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "72",
+    "name": "Etapa 5.5 — Diseño de ventanas emergentes, diálogos y Faceplates en Ignition",
+    "duration": "6 days",
+    "start": "2026-10-28",
+    "finish": "2026-11-04",
+    "type": "resumen",
+    "progress": 20
+  },
+  {
+    "id": "73",
+    "name": "Lote 1/2 — Diseño de D-010 a D-120 (ventanas de órdenes/comandos) y F-100 a F-185 (Faceplates) (ítems 32-33)",
+    "duration": "3 days",
+    "start": "2026-10-28",
+    "finish": "2026-10-30",
+    "type": "tarea",
+    "progress": 40
+  },
+  {
+    "id": "74",
+    "name": "Lote 2/2 — A-300/A-310 (alarmas), T-200/T-210/T-220 (tendencias), N-400 (navegación) y validación de reglas de apilamiento (ítems 34-37)",
+    "duration": "3 days",
+    "start": "2026-11-02",
+    "finish": "2026-11-04",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "75",
+    "name": "Etapa 5.6 — Validación final y emisión de versión 1.0",
+    "duration": "2 days",
+    "start": "2026-11-05",
+    "finish": "2026-11-06",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "76",
+    "name": "Revisión de consistencia visual, contraste/legibilidad en escala de grises, navegación e interacción, y observaciones recibidas (ítems 38-41)",
+    "duration": "1 days",
+    "start": "2026-11-05",
+    "finish": "2026-11-05",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "77",
+    "name": "Incorporación de correcciones, validación final para Ignition y emisión de versión 1.0 (ítems 42-44)",
+    "duration": "1 days",
+    "start": "2026-11-06",
     "finish": "2026-11-06",
     "type": "tarea",
     "progress": 0
   },
   {
-    "id": "11",
-    "name": "Alarmas, históricos y reportes",
+    "id": "78",
+    "name": "Hito: emisión de la versión 1.0 del estándar gráfico y de interacción",
+    "duration": "0 days",
+    "start": "2026-11-06",
+    "finish": "2026-11-06",
+    "type": "hito",
+    "progress": 0
+  },
+  {
+    "id": "79",
+    "name": "Etapa 7 — Prototipo y validación con operadores",
+    "duration": "20 days",
+    "start": "2026-11-09",
+    "finish": "2026-12-04",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "80",
+    "name": "Construcción de prototipo navegable (3 pantallas representativas)",
     "duration": "10 days",
     "start": "2026-11-09",
     "finish": "2026-11-20",
@@ -99,8 +720,8 @@
     "progress": 0
   },
   {
-    "id": "12",
-    "name": "Pruebas FAT",
+    "id": "81",
+    "name": "Sesiones de validación del prototipo con operadores de HEMCO",
     "duration": "5 days",
     "start": "2026-11-23",
     "finish": "2026-11-27",
@@ -108,17 +729,44 @@
     "progress": 0
   },
   {
-    "id": "13",
-    "name": "FAT aprobado",
+    "id": "82",
+    "name": "Incorporación de hallazgos y ajuste del estándar post-prototipo",
+    "duration": "5 days",
+    "start": "2026-11-30",
+    "finish": "2026-12-04",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "83",
+    "name": "Hito: estándar ajustado con hallazgos del prototipo",
     "duration": "0 days",
-    "start": "2026-11-27",
-    "finish": "2026-11-27",
+    "start": "2026-12-04",
+    "finish": "2026-12-04",
     "type": "hito",
     "progress": 0
   },
   {
-    "id": "14",
-    "name": "Instalación y puesta en marcha",
+    "id": "84",
+    "name": "Etapa 6 — Racionalización de alarmas",
+    "duration": "25 days",
+    "start": "2026-11-09",
+    "finish": "2026-12-11",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "85",
+    "name": "Talleres de racionalización de alarmas (procesos, operaciones y mantenimiento)",
+    "duration": "15 days",
+    "start": "2026-11-09",
+    "finish": "2026-11-27",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "86",
+    "name": "Documentación de banda muerta, retardo, causa probable, consecuencia y acción correctiva por tag",
     "duration": "10 days",
     "start": "2026-11-30",
     "finish": "2026-12-11",
@@ -126,20 +774,641 @@
     "progress": 0
   },
   {
-    "id": "15",
-    "name": "Pruebas SAT y capacitación",
+    "id": "87",
+    "name": "Hito: base de datos de alarmas cerrada",
+    "duration": "0 days",
+    "start": "2026-12-11",
+    "finish": "2026-12-11",
+    "type": "hito",
+    "progress": 0
+  },
+  {
+    "id": "88",
+    "name": "Gabinete PLC Maestro — armado electromecánico",
+    "duration": "10 days",
+    "start": "2026-10-05",
+    "finish": "2026-10-16",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "89",
+    "name": "Armado e integración electromecánica del gabinete (UPS, switches SCALANCE IEC 62443-4-2, cableado)",
+    "duration": "10 days",
+    "start": "2026-10-05",
+    "finish": "2026-10-16",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "90",
+    "name": "Gabinete PLC Maestro — programación del PLC Maestro",
+    "duration": "42 days",
+    "start": "2026-10-05",
+    "finish": "2026-12-01",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "91",
+    "name": "Configuración del PLC Maestro: enlaces OPC y mapeo de ~14,000 variables",
+    "duration": "22 days",
+    "start": "2026-10-05",
+    "finish": "2026-11-03",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "92",
+    "name": "Programación de bloques de comunicación TSEND/TRCV entre PLC de campo y PLC Maestro",
+    "duration": "10 days",
+    "start": "2026-11-04",
+    "finish": "2026-11-17",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "93",
+    "name": "Implementación de lógica de convivencia (interlock LOCAL→bloqueo SCADA / REMOTO→habilita SCADA, handshake)",
+    "duration": "10 days",
+    "start": "2026-11-18",
+    "finish": "2026-12-01",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "94",
+    "name": "Gabinete PLC Maestro — planos eléctricos y documentación",
     "duration": "5 days",
+    "start": "2026-10-05",
+    "finish": "2026-10-09",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "95",
+    "name": "Elaboración de planos eléctricos y documentación técnica del gabinete",
+    "duration": "5 days",
+    "start": "2026-10-05",
+    "finish": "2026-10-09",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "96",
+    "name": "Gabinete PLC Maestro — FAT interna del gabinete",
+    "duration": "5 days",
+    "start": "2026-12-02",
+    "finish": "2026-12-08",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "97",
+    "name": "Pruebas FAT internas del gabinete (sin planta, con PLC simulados)",
+    "duration": "5 days",
+    "start": "2026-12-02",
+    "finish": "2026-12-08",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "98",
+    "name": "Gabinete PLC Maestro — instalación en sitio y puesta en marcha",
+    "duration": "3 days",
+    "start": "2026-12-09",
+    "finish": "2026-12-11",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "99",
+    "name": "Instalación en sitio y pruebas funcionales del gabinete (puesta en marcha)",
+    "duration": "3 days",
+    "start": "2026-12-09",
+    "finish": "2026-12-11",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "100",
+    "name": "Hito: cierre de la ruta del Gabinete PLC Maestro",
+    "duration": "0 days",
     "start": "2026-12-14",
+    "finish": "2026-12-14",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "101",
+    "name": "Hito: Gabinete PLC Maestro operativo en planta",
+    "duration": "0 days",
+    "start": "2026-12-14",
+    "finish": "2026-12-14",
+    "type": "hito",
+    "progress": 0
+  },
+  {
+    "id": "102",
+    "name": "Construcción — Fase 1: Preparación del entorno y base de tags",
+    "duration": "17 days",
+    "start": "2026-11-09",
+    "finish": "2026-12-01",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "103",
+    "name": "Instalación y configuración del Gateway Ignition (módulos: Vision/Perspective, Alarming, Tag Historian, Reporting)",
+    "duration": "2 days",
+    "start": "2026-11-09",
+    "finish": "2026-11-10",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "104",
+    "name": "Configuración de conexión OPC UA hacia los PLC (uno por área: Chancado, Molienda, CIL, Agua, Energía, etc.)",
+    "duration": "3 days",
+    "start": "2026-11-11",
+    "finish": "2026-11-13",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "105",
+    "name": "Importación de la base de datos de tags desde los DB de PLC ya estandarizados (vía SyncVar)",
+    "duration": "4 days",
+    "start": "2026-11-16",
+    "finish": "2026-11-19",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "106",
+    "name": "Aplicar codificación HEM-Área-Tipo-Número a cada tag y carpeta (estructura HEM/MOL/Molino_01/ML-3101)",
+    "duration": "3 days",
+    "start": "2026-11-20",
+    "finish": "2026-11-24",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "107",
+    "name": "Configuración de UDT en Ignition equivalentes a los UDT del PLC (typeMotorStatus, typeSensorStatus, typeCMD, etc.)",
+    "duration": "3 days",
+    "start": "2026-11-25",
+    "finish": "2026-11-27",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "108",
+    "name": "Configuración de Tag Historian (tags a loguear, tasa de muestreo, retención ≥2 años para auditoría)",
+    "duration": "2 days",
+    "start": "2026-11-30",
+    "finish": "2026-12-01",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "109",
+    "name": "Construcción — Fase 2: Sistema de diseño (theme y librerías)",
+    "duration": "14 days",
+    "start": "2026-11-09",
+    "finish": "2026-11-26",
+    "type": "resumen",
+    "progress": 22
+  },
+  {
+    "id": "110",
+    "name": "Cargar el archivo fuente de verdad (Anexo A: 36 colores, 8 tamaños, 13 medidas) como theme de Ignition",
+    "duration": "2 days",
+    "start": "2026-11-09",
+    "finish": "2026-11-10",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "111",
+    "name": "Construir librería de símbolos vectoriales (motores, bombas, molinos, válvulas, instrumentos) como componentes reutilizables",
+    "duration": "5 days",
+    "start": "2026-11-11",
+    "finish": "2026-11-17",
+    "type": "tarea",
+    "progress": 45
+  },
+  {
+    "id": "112",
+    "name": "Construir librería de botones (primario/secundario/comando/reposición, 3 tamaños) como componentes",
+    "duration": "2 days",
+    "start": "2026-11-18",
+    "finish": "2026-11-19",
+    "type": "tarea",
+    "progress": 15
+  },
+  {
+    "id": "113",
+    "name": "Construir plantillas de etiqueta de valor (5 tipos) como templates",
+    "duration": "2 days",
+    "start": "2026-11-20",
+    "finish": "2026-11-23",
+    "type": "tarea",
+    "progress": 25
+  },
+  {
+    "id": "114",
+    "name": "Construir plantilla maestra de pantalla (retícula 8px, encabezado, banner, navegación, lienzo, pie)",
+    "duration": "3 days",
+    "start": "2026-11-24",
+    "finish": "2026-11-26",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "115",
+    "name": "Ventana de paro 2 — Precipitación (PLC de Precipitación, Agitador 0, Agitador 1, Espesadores)",
+    "duration": "0 days",
+    "start": "2026-12-19",
+    "finish": "2026-12-19",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "116",
+    "name": "Ventana de paro 2 — Precipitación",
+    "duration": "0 days",
+    "start": "2026-12-19",
+    "finish": "2026-12-19",
+    "type": "hito",
+    "progress": 0
+  },
+  {
+    "id": "117",
+    "name": "Construcción — Fase 3: Construcción de pantallas de consola",
+    "duration": "26 days",
+    "start": "2026-11-27",
+    "finish": "2027-01-01",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "118",
+    "name": "Construir Nivel 1 — vista de planta completa (9 áreas + indicadores de turno)",
+    "duration": "3 days",
+    "start": "2026-11-27",
+    "finish": "2026-12-01",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "119",
+    "name": "Construir Nivel 2 — diagramas de proceso por área (9 áreas)",
+    "duration": "8 days",
+    "start": "2026-12-02",
+    "finish": "2026-12-11",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "120",
+    "name": "Construir Nivel 3 — pantallas de unidad/equipo (molino, banco de bombas, espesador, etc.)",
+    "duration": "6 days",
+    "start": "2026-12-14",
+    "finish": "2026-12-21",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "121",
+    "name": "Construir Nivel 4 — pantallas de diagnóstico (enclavamientos, variadores, comunicaciones)",
+    "duration": "4 days",
+    "start": "2026-12-22",
+    "finish": "2026-12-25",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "122",
+    "name": "Construir pantallas de soporte: alarmas, histórico, tendencias, reportes, eventos, administración",
+    "duration": "5 days",
+    "start": "2026-12-28",
+    "finish": "2027-01-01",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "123",
+    "name": "Construcción — Fase 5: Lógica funcional y seguridad",
+    "duration": "16 days",
+    "start": "2026-12-02",
+    "finish": "2026-12-23",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "124",
+    "name": "Implementar secuencia de 6 pasos por orden (permiso → enclavamientos → confirmar → verificar PLC → registrar)",
+    "duration": "5 days",
+    "start": "2026-12-02",
+    "finish": "2026-12-08",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "125",
+    "name": "Configurar roles y niveles de acceso (RBAC) e identity provider",
+    "duration": "2 days",
+    "start": "2026-12-09",
+    "finish": "2026-12-10",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "126",
+    "name": "Implementar audit trail (usuario, equipo, valor anterior/nuevo, hora; solo lectura)",
+    "duration": "3 days",
+    "start": "2026-12-11",
+    "finish": "2026-12-15",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "127",
+    "name": "Implementar catálogo de acciones con firma (enclavamiento, lazo crítico, equipo mayor, relaves/cianuro, forzado)",
+    "duration": "3 days",
+    "start": "2026-12-16",
     "finish": "2026-12-18",
     "type": "tarea",
     "progress": 0
   },
   {
-    "id": "16",
-    "name": "Entrega final",
+    "id": "128",
+    "name": "Configurar segmentación de red IT/OT y reglas de firewall (IEC 62443)",
+    "duration": "3 days",
+    "start": "2026-12-21",
+    "finish": "2026-12-23",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "129",
+    "name": "Bombas Abel — ventana de rotación (Bomba 1 y 2 Rockwell, Bomba 3 Siemens)",
+    "duration": "1 days",
+    "start": "2027-01-15",
+    "finish": "2027-01-15",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "130",
+    "name": "Bombas Abel — ventana de rotación",
+    "duration": "1 days",
+    "start": "2027-01-15",
+    "finish": "2027-01-15",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "131",
+    "name": "Construcción — Fase 4: Ventanas emergentes y diálogos",
+    "duration": "19 days",
+    "start": "2027-01-04",
+    "finish": "2027-01-28",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "132",
+    "name": "Construir 12 diálogos de orden (confirmar comando, cambiar consigna, reset, etc.) con lógica declare-antes-de-ejecutar",
+    "duration": "6 days",
+    "start": "2027-01-04",
+    "finish": "2027-01-11",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "133",
+    "name": "Construir 13 ventanas de detalle (5 pestañas fijas: vista, calibración, alarmas, tendencia, info)",
+    "duration": "8 days",
+    "start": "2027-01-12",
+    "finish": "2027-01-21",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "134",
+    "name": "Construir 4 ventanas de alarma y tendencia",
+    "duration": "3 days",
+    "start": "2027-01-22",
+    "finish": "2027-01-26",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "135",
+    "name": "Implementar reglas de apilamiento (máx. 2 no modales, modal nunca tapa banner)",
+    "duration": "2 days",
+    "start": "2027-01-27",
+    "finish": "2027-01-28",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "136",
+    "name": "Construcción — Fase 6: Alarmas, tendencias e indicadores",
+    "duration": "16 days",
+    "start": "2027-01-29",
+    "finish": "2027-02-19",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "137",
+    "name": "Configurar filosofía de alarmas en Ignition (prioridades P1-P4+D, plantilla causa/consecuencia/acción)",
+    "duration": "5 days",
+    "start": "2027-01-29",
+    "finish": "2027-02-04",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "138",
+    "name": "Configurar banner de alarmas y pantalla de lista de alarmas",
+    "duration": "2 days",
+    "start": "2027-02-05",
+    "finish": "2027-02-08",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "139",
+    "name": "Configurar gráficos de tendencias (máx. 7 plumas, escala %, sin rojo, sin doble eje)",
+    "duration": "3 days",
+    "start": "2027-02-09",
+    "finish": "2027-02-11",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "140",
+    "name": "Construir 5 tarjetas de KPI (tratamiento, recuperación, agua, energía, ley de cabeza)",
+    "duration": "3 days",
+    "start": "2027-02-12",
+    "finish": "2027-02-16",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "141",
+    "name": "Configurar exportación de reportes por audiencia (operación/gerencia/planeación/ambiente)",
+    "duration": "3 days",
+    "start": "2027-02-17",
+    "finish": "2027-02-19",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "142",
+    "name": "Construcción — Fase 7: Videowall",
+    "duration": "6 days",
+    "start": "2027-02-22",
+    "finish": "2027-03-01",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "143",
+    "name": "Configurar los 6 paneles del videowall (VW-01 a VW-06) a 1920×1080 c/u",
+    "duration": "4 days",
+    "start": "2027-02-22",
+    "finish": "2027-02-25",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "144",
+    "name": "Ajustar tipografía de muro según distancia confirmada (cuerpo mínimo)",
+    "duration": "1 days",
+    "start": "2027-02-26",
+    "finish": "2027-02-26",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "145",
+    "name": "Validar que ningún elemento cruza biseles y que el logo aparece una sola vez",
+    "duration": "1 days",
+    "start": "2027-03-01",
+    "finish": "2027-03-01",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "146",
+    "name": "Hito: construcción completa — revisión interna contra el estándar",
     "duration": "0 days",
-    "start": "2026-12-18",
-    "finish": "2026-12-18",
+    "start": "2027-03-02",
+    "finish": "2027-03-02",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "147",
+    "name": "Hito: construcción completa",
+    "duration": "0 days",
+    "start": "2027-03-02",
+    "finish": "2027-03-02",
+    "type": "hito",
+    "progress": 0
+  },
+  {
+    "id": "148",
+    "name": "Fase 8 — Pruebas y entrega (FAT, accesibilidad, carga, capacitación, SAT + Gate Review)",
+    "duration": "14 days",
+    "start": "2027-03-02",
+    "finish": "2027-03-19",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "149",
+    "name": "Pruebas FAT internas (funcional, por pantalla y por secuencia de orden)",
+    "duration": "5 days",
+    "start": "2027-03-02",
+    "finish": "2027-03-08",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "150",
+    "name": "Prueba de aceptación en escala de grises (verificar operabilidad sin color)",
+    "duration": "1 days",
+    "start": "2027-03-09",
+    "finish": "2027-03-09",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "151",
+    "name": "Prueba de carga y latencia con los 6 PLC en línea simultáneamente",
+    "duration": "2 days",
+    "start": "2027-03-10",
+    "finish": "2027-03-11",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "152",
+    "name": "Capacitación a operadores (4 turnos)",
+    "duration": "3 days",
+    "start": "2027-03-12",
+    "finish": "2027-03-16",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "153",
+    "name": "SAT en sitio con HEMCO y Gate Review de cierre",
+    "duration": "3 days",
+    "start": "2027-03-17",
+    "finish": "2027-03-19",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "154",
+    "name": "Etapa 11 — Capacitación y acompañamiento",
+    "duration": "31 days",
+    "start": "2027-02-22",
+    "finish": "2027-04-05",
+    "type": "resumen",
+    "progress": 0
+  },
+  {
+    "id": "155",
+    "name": "Elaboración del manual de operación por rol",
+    "duration": "8 days",
+    "start": "2027-02-22",
+    "finish": "2027-03-03",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "156",
+    "name": "Acompañamiento en los primeros turnos y ajuste de alarmas con datos reales",
+    "duration": "10 days",
+    "start": "2027-03-23",
+    "finish": "2027-04-05",
+    "type": "tarea",
+    "progress": 0
+  },
+  {
+    "id": "157",
+    "name": "HITO FINAL — Cierre del proyecto: entrega del diseño SCADA HMI Plantel Hemco",
+    "duration": "0 days",
+    "start": "2027-04-05",
+    "finish": "2027-04-05",
     "type": "hito",
     "progress": 0
   }
