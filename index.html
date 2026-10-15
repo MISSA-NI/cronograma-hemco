@@ -84,6 +84,8 @@
             <button class="btn btn-warning" id="publishBtn"><i class="fas fa-cloud-upload-alt"></i> Publicar</button>
             <button class="btn" id="refreshGanttBtn"><i class="fas fa-sync-alt"></i> Actualizar Gantt</button>
             <button class="btn-excel" id="exportExcelBtn"><i class="fas fa-file-excel"></i> Exportar a Excel</button>
+            <button class="btn" id="importJsonBtn" title="Cargar un archivo .json"><i class="fas fa-file-import"></i> Importar JSON</button>
+            <input type="file" id="importJsonInput" accept=".json,application/json" style="display:none">
             <button class="btn" id="saveJsonBtn" title="Respaldo manual"><i class="fas fa-download"></i> Exportar JSON</button>
             <button class="btn btn-secondary" id="clearAllBtn"><i class="fas fa-broom"></i> Limpiar todo</button>
             <button class="btn btn-secondary" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</button>
@@ -397,6 +399,62 @@
             }
         }, 150);
     }
+
+    // ============ IMPORTAR JSON ============
+    // Acepta fechas AAAA-MM-DD, DD/MM/AAAA o con hora (2026-09-28T00:00:00) y las deja en AAAA-MM-DD
+    function normDate(v) {
+        const s = String(v ?? '').trim();
+        if (!s) return '';
+        let m = /^(\d{4})-(\d{1,2})-(\d{1,2})/.exec(s);
+        if (m) return `${m[1]}-${pad(m[2])}-${pad(m[3])}`;
+        m = /^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/.exec(s);
+        if (m) { const y = m[3].length === 2 ? '20' + m[3] : m[3]; return `${y}-${pad(m[2])}-${pad(m[1])}`; }
+        return s;
+    }
+    function normType(v) {
+        const s = String(v ?? '').trim().toLowerCase();
+        if (s.startsWith('hit') || s === 'milestone') return 'hito';
+        if (s.startsWith('res') || s === 'summary') return 'resumen';
+        return 'tarea';
+    }
+    function normalizeImported(data) {
+        const list = Array.isArray(data) ? data : (data && Array.isArray(data.tasks) ? data.tasks : null);
+        if (!list) throw new Error('El archivo no contiene una lista de tareas.');
+        return list.filter(t => t && typeof t === 'object').map((t, i) => ({
+            id: String(t.id ?? t.ID ?? (i + 1)),
+            name: String(t.name ?? t.nombre ?? t.Name ?? ''),
+            duration: String(t.duration ?? t.duracion ?? t['duración'] ?? ''),
+            start: normDate(t.start ?? t.inicio ?? t.Start),
+            finish: normDate(t.finish ?? t.fin ?? t.end ?? t.Finish),
+            type: normType(t.type ?? t.tipo),
+            progress: Math.min(100, Math.max(0, parseFloat(t.progress ?? t.progreso) || 0))
+        }));
+    }
+
+    const importInput = document.getElementById('importJsonInput');
+    document.getElementById('importJsonBtn').addEventListener('click', () => { importInput.value = ''; importInput.click(); });
+    importInput.addEventListener('change', () => {
+        const file = importInput.files && importInput.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+            try {
+                const tasks = normalizeImported(JSON.parse(String(reader.result).replace(/^\uFEFF/, '')));
+                if (!tasks.length) return alert('El archivo no tiene tareas.');
+                syncFromTable();
+                if (window.currentTasks.length &&
+                    !confirm(`Se reemplazarán las ${window.currentTasks.length} filas actuales por las ${tasks.length} del archivo "${file.name}".\n\n¿Continuar?`)) return;
+                window.currentTasks = tasks;
+                renderTable(window.currentTasks);
+                renderGantt();
+                alert(`✅ Se importaron ${tasks.length} filas.\nRevisa los datos y presiona "Publicar" para que se vean en la vista de solo lectura.`);
+            } catch (e) {
+                alert('No se pudo importar el archivo: ' + e.message);
+            }
+        };
+        reader.onerror = () => alert('No se pudo leer el archivo.');
+        reader.readAsText(file, 'utf-8');
+    });
 
     // ============ EXPORTAR A EXCEL (con formato) ============
     function buildWorkbook(ExcelJS, tasks, projectDate) {
