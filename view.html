@@ -36,15 +36,21 @@
         .gantt-container::-webkit-scrollbar-thumb { background: #1e3a8a; border-radius: 6px; }
         .gantt-container svg { min-width: 100%; height: auto; }
         .gantt .bar-label { display: none !important; }
-        .gantt .bar-task { fill: #1e3a8a !important; stroke: #1e40af !important; }
-        .gantt .bar-hito { fill: #c8102e !important; stroke: #a6192e !important; }
-        .gantt .bar-resumen { fill: #94a3b8 !important; stroke: #64748b !important; }
+        .gantt .bar-wrapper.bar-task .bar { fill: #1e3a8a; stroke: #1e40af; }
+        .gantt .bar-wrapper.bar-hito .bar { fill: #c8102e; stroke: #a6192e; }
+        .gantt .bar-wrapper.bar-resumen .bar { fill: #94a3b8; stroke: #64748b; }
+        .gantt .bar-wrapper .bar-progress { fill: rgba(255,255,255,0.35); }
+        .gantt .lbl-pill, .gantt .lbl-text { pointer-events: none; }
+        .gantt .lbl-pill { stroke-width: 1; }
+        .gantt .lbl-text { font-size: 11.5px; font-weight: 500; dominant-baseline: central; }
+        .gantt .bar-task .lbl-pill { fill: #dbeafe; stroke: #93c5fd; }
+        .gantt .bar-task .lbl-text { fill: #1e3a8a; }
+        .gantt .bar-hito .lbl-pill { fill: #fee2e2; stroke: #fca5a5; }
+        .gantt .bar-hito .lbl-text { fill: #a6192e; }
+        .gantt .bar-resumen .lbl-pill { fill: #f1f5f9; stroke: #cbd5e1; }
+        .gantt .bar-resumen .lbl-text { fill: #475569; font-style: italic; }
         /* Solo lectura: sin arrastre ni redimensionado de barras */
         #gantt .bar-wrapper { pointer-events: none; }
-        .gantt-label-overlay { position: absolute; pointer-events: none; z-index: 30; white-space: nowrap; font-size: 11.5px; font-weight: 500; padding: 3px 8px; border-radius: 5px; transform: translateY(-50%); }
-        .label-tarea { background: #dbeafe; color: #1e3a8a; border: 1px solid #93c5fd; }
-        .label-hito { background: #fee2e2; color: #a6192e; border: 1px solid #fca5a5; }
-        .label-resumen { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; font-style: italic; }
         .legend { display: flex; gap: 24px; margin: 12px 0 8px 0; font-size: 0.8rem; color: #1e3a8a; }
         .legend-color { width: 20px; height: 14px; border-radius: 3px; display: inline-block; vertical-align: middle; margin-right: 6px; }
         .legend-color.tarea { background: #1e3a8a; }
@@ -152,33 +158,48 @@
             if (t.type === 'resumen') cc = 'bar-resumen';
             let end = t.finish;
             if (t.type === 'hito' && t.start === t.finish) end = addDaysISO(t.start, 1);
-            return { id: String(t.id || 'x' + i), name: t.name.length > 40 ? t.name.substring(0,37) + '...' : t.name,
-                     start: t.start, end, progress: parseInt(t.progress) || 0, dependencies: '', custom_class: cc };
+            // id interno único (g0, g1, …): cada barra queda vinculada siempre a su propia tarea
+            return { id: 'g' + i, name: t.name, start: t.start, end,
+                     progress: parseInt(t.progress) || 0, dependencies: '', custom_class: cc };
         });
     }
 
-    function overlayLabels() {
-        document.querySelectorAll('.gantt-label-overlay').forEach(el => el.remove());
-        const container = document.getElementById('ganttContainer');
-        if (!document.querySelector('#gantt svg')) return;
-        const cRect = container.getBoundingClientRect();
-        document.querySelectorAll('#gantt .bar').forEach((bar, idx) => {
-            const task = ganttSource[idx];
-            if (!task) return;
-            const bRect = bar.getBoundingClientRect();
-            const label = document.createElement('div');
-            label.className = 'gantt-label-overlay ' + (task.type === 'hito' ? 'label-hito' : task.type === 'resumen' ? 'label-resumen' : 'label-tarea');
-            label.textContent = task.name.length > 45 ? task.name.substring(0,42) + '...' : task.name;
-            label.style.left = (bRect.left - cRect.left + container.scrollLeft + bRect.width + 8) + 'px';
-            label.style.top = (bRect.top - cRect.top + bRect.height / 2) + 'px';
-            container.appendChild(label);
+    // Etiqueta dibujada DENTRO del SVG, en el mismo grupo que su barra: siempre va pegada a ella
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+    function decorateBars() {
+        const svg = document.querySelector('#gantt svg');
+        if (!svg) return;
+        const svgW = parseFloat(svg.getAttribute('width')) || svg.getBoundingClientRect().width;
+        svg.querySelectorAll('.bar-wrapper').forEach(w => {
+            const t = ganttSource[parseInt(String(w.getAttribute('data-id') || '').slice(1), 10)];
+            const bar = w.querySelector('.bar');
+            if (!t || !bar) return;
+            const group = w.querySelector('.bar-group') || w;
+            let pill = w.querySelector('.lbl-pill'), txt = w.querySelector('.lbl-text');
+            if (!pill) {
+                pill = document.createElementNS(SVG_NS, 'rect'); pill.setAttribute('class', 'lbl-pill');
+                txt = document.createElementNS(SVG_NS, 'text'); txt.setAttribute('class', 'lbl-text');
+                group.appendChild(pill); group.appendChild(txt);
+            }
+            const name = t.name.length > 45 ? t.name.substring(0, 42) + '...' : t.name;
+            if (txt.textContent !== name) txt.textContent = name;
+            const bx = parseFloat(bar.getAttribute('x')), by = parseFloat(bar.getAttribute('y'));
+            const bw = parseFloat(bar.getAttribute('width')), bh = parseFloat(bar.getAttribute('height'));
+            const PADX = 8, GAP = 8, PH = 20;
+            const pw = txt.getComputedTextLength() + PADX * 2;
+            let left = bx + bw + GAP;                                        // a la derecha de la barra
+            if (left + pw > svgW - 4) left = (bx - GAP - pw >= 0) ? bx - GAP - pw : bx + 4;   // sin espacio: a la izquierda
+            const cy = by + bh / 2;
+            pill.setAttribute('x', left); pill.setAttribute('y', cy - PH / 2);
+            pill.setAttribute('width', pw); pill.setAttribute('height', PH);
+            pill.setAttribute('rx', 5);
+            txt.setAttribute('x', left + PADX); txt.setAttribute('y', cy);
         });
     }
 
     function renderGantt() {
         const tasks = buildGanttTasks(currentTasks);
         ganttEl.innerHTML = '';
-        document.querySelectorAll('.gantt-label-overlay').forEach(el => el.remove());
         if (tasks.length === 0) {
             ganttEl.innerHTML = '<div style="text-align:center;padding:60px;color:#94a3b8;">Sin datos.</div>';
             return;
@@ -188,20 +209,8 @@
             bar_corner_radius: 3, padding: 18, view_mode: 'Month',
             date_format: 'YYYY-MM-DD', language: 'es'
         });
-        setTimeout(() => {
-            document.querySelectorAll('#gantt .bar').forEach((bar, idx) => {
-                const t = tasks[idx]; if (!t) return;
-                bar.classList.remove('bar-task','bar-hito','bar-resumen');
-                bar.classList.add(t.custom_class);
-            });
-            overlayLabels();
-            const c = document.getElementById('ganttContainer');
-            if (!c.dataset.scrollListener) {
-                c.dataset.scrollListener = 'true';
-                c.addEventListener('scroll', overlayLabels);
-                window.addEventListener('resize', overlayLabels);
-            }
-        }, 150);
+        decorateBars();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(decorateBars);   // re-mide al cargar la fuente
     }
 
     // ============ EXPORTAR A EXCEL (con formato) ============
